@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Domain.Models.DefaultLog>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+
+        <thead>
+            <tr>
+                <th>
+                    Log Id
+                </th>
+                <th>
+                    Exchanges
+                </th>
+                <th>
+                    Routing Key
+                </th>
+                <th>
+                    Message
+                </th>
+                <th>
+                    Create Date
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.LogId
+                    </td>
+
+                    <td>
+                        @item.Exchange
+                    </td>
+
+                    <td>
+                        @item.Routing_Key
+                    </td>
+
+                    <td>
+                        @item.Message
+                    </td>
+                    <td>
+                        @item.CreateDate
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

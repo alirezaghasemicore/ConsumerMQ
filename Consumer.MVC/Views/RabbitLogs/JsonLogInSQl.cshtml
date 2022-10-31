@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Domain.Models.JsonLog>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+
+        <thead>
+            <tr>
+                <th>
+                    Json Id
+                </th>
+                <th>
+                    Log Text
+                </th>
+                <th>
+                    Create Date
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.JsonId
+                    </td>
+
+                    <td>
+                        @item.LogText
+                    </td>
+
+                    <td>
+                        @item.CreateDate
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

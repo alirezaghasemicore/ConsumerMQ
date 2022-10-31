@@ -5,11 +5,11 @@ using System.IO;
 
 namespace Consumer.MVC.Controllers
 {
-    public class LogController : Controller
+    public class RabbitLogsController : Controller
     {
         private IDefaultLogService _defaultLogService;
         private IJsonLogService _jsonLogService;
-        public LogController(IDefaultLogService defaultLogService, IJsonLogService jsonLogService)
+        public RabbitLogsController(IDefaultLogService defaultLogService, IJsonLogService jsonLogService)
         {
             _defaultLogService = defaultLogService;
             _jsonLogService = jsonLogService;
